@@ -55,6 +55,3 @@ for leaf in candidate_max_leaf_nodes:
     
 
         
-
-# Store the best value of max_leaf_nodes (it will be either 5, 25, 50, 100, 250 or 500)
-#best_tree_size 
