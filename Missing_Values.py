@@ -10,6 +10,8 @@ data=pd.read_csv("melb_data.csv")
 Y=data.Price
 melbourne=data.drop(["Price"],axis=1)
 X =melbourne.select_dtypes(exclude=['object'])
+missing_values=X.isnull().sum()
+print(missing_values)
 
 X_train,X_test,y_train,y_test=train_test_split(X,Y)
 
@@ -46,4 +48,4 @@ imputed_X_test=pd.DataFrame(impute.transform(X_test))
 imputed_X_train.columns=X_train.columns
 imputed_X_test.columns=X_test.columns
 
-print(score_model(imputed_X_train,imputed_X_test))
+# print(score_model(imputed_X_train,imputed_X_test))
